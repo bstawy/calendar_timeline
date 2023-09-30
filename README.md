@@ -47,3 +47,46 @@ CalendarTimeline(
   locale: 'en_ISO',
 )
 ```
+
+---------------------------------------------------------------------------------------
+
+## Change InactiveDayBackgroundColor
+
+In function (_buildDay), change Container's decoration with desired color
+
+
+```
+return GestureDetector(
+      onTap: available ? onTap as void Function()? : null,
+      child: Container(
+        decoration:
+
+
+      //  *****  Here is the decoration which i wanted calender days to be as ***** 
+            BoxDecoration(
+              color: isSelected
+                  ? activeDayBackgroundColor ??
+                      Theme.of(context).colorScheme.secondary
+                  : Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+
+
+
+        //  *****  This commented code is the source one which makes the background to be transparent *****
+
+        // isSelected
+        //     ? BoxDecoration(
+        //   color: activeDayBackgroundColor ??
+        //       Theme.of(context).colorScheme.secondary,
+        //   borderRadius: BorderRadius.circular(12),
+        // )
+        //     : const BoxDecoration(color: Colors.transparent),
+
+        // ***** add some margin to make it looks good  ***** 
+        margin: const EdgeInsets.symmetric(horizontal: 4),
+
+        height: shrink ? shrinkHeight : height,
+        width: shrink ? shrinkWidth : width,
+```
+
