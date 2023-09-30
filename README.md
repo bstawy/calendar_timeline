@@ -1,3 +1,5 @@
+**Note: Go to end of README.md to find how to set a specific color for inactive day.**
+
 ![header.jpg](header.jpg)
 
 **Flutter widget form select a date in horizontal timeline with customizable styles.**
@@ -84,7 +86,7 @@ return GestureDetector(
         //     : const BoxDecoration(color: Colors.transparent),
 
         // ***** add some margin to make it looks good  ***** 
-        margin: const EdgeInsets.symmetric(horizontal: 4),
+        margin: const EdgeInsets.only(top: 4, left: 4, right: 4),
 
         height: shrink ? shrinkHeight : height,
         width: shrink ? shrinkWidth : width,
